@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:500');
+/* -------------- CUERPO --------------------*/
+body{
+  width: auto;
+  height: auto;
+  border: 60px;
+  margin: 70 auto;
+  padding: 50;
+  overflow: hidden;
+  float: none !important;
+  background-size: cover;
+
+}
+.back{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+}
+.thx{
+  position: fixed;
+  left:50%;
+  transform:translateX(-50%);
+  bottom: 15px;
+}
+#space_video {
+  z-index: -1;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
+/* -------------------------------------------*/
+
+/* --------------------  POPUP ------------------*/
+#overlay {
+  position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+.game_over{
+  position: absolute;
+  width:550px;
+  top: 3vw;
+  left: 67vh;
+}
+h4{
+  position: absolute;
+  top: 60vh;
+  left: 51vw;
+  font-size: 30px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+.contenedor-inputs{
+  position: absolute;
+  width: 190px;
+  top: 71vh;
+  left: 45vw;
+}
+.btn-submit{
+  position: absolute;
+  top: 79vh;
+  left: 46.5vw;
+  width: 150px;
+}
+
+
+
+/* ----------------------------------------------*/
+
+/* --------------------  CRONO ------------------*/
+
+.time-crono{
+  display: block;
+  position: absolute;
+  top: 19vh;
+  left: 76vw;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.marcador{
+  display: block;
+  position: absolute;
+  top: 19vh;
+  left: 19vw;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Oswald', sans-serif;
+}
+/* -------------------------------------------*/
+
+/*--------------- NAVEGADOR ------------------*/
+nav{
+  width: 100%;
+  position: fixed;
+  top:50px;
+  text-align:center;
+}
+nav a{
+  font-family: 'Oswald', sans-serif;
+  font-weight:500;
+  text-transform:uppercase;
+  text-decoration:none;
+  color: #f4f4f4;
+  margin:0 15px;
+  font-size:20px;
+  letter-spacing:1px;
+  position:relative;
+  display:inline-block;
+}
+nav a:before{
+  content:'';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #f4f4f4;
+  top:47%;
+  animation:out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+nav a:hover:before{
+  animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+
+@keyframes in{
+  0%{
+    width: 0;
+    left:0;
+    right:auto;
+  }
+  100%{
+    left:0;
+    right:auto;
+    width: 100%;
+  }
+}
+@keyframes out{
+  0%{
+    width:100%;
+    left: auto;
+    right: 0;
+  }
+  100%{
+    width: 0;
+    left: auto;
+    right: 0;
+  }
+}
+@keyframes show{
+  0%{
+    opacity:0;
+    transform:translateY(-10px);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@for $i from 1 through 5 {
+  nav a:nth-child(#{$i}){
+    animation:show .2s #{$i*0.1+1}s ease 1 both;
+  }
+}
+
+/* ------------------ CONTACT US -----------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:500');
+body {font-family: 'Oswald', sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid: white;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: auto;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: 'Oswald', sans-serif;
+}
+input[type=submit] {
+  background-color: #252850;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+}
+input[type=submit]:hover {
+  background-color: #252850;
+
+}
+.container {
+  border-radius: 3px;
+  padding: 20px;
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  top: 100%;
+}
+.contact{
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  top: 75px;
+}
+
+/* ------------------ CANVAS -----------------*/
+#mycanvas {
+    background-image: url("../imagenes/gif/img1.gif");
+    background-repeat:no-repeat;
+    background-size: cover;
+    z-index: 1;
+    padding: 0;
+    margin: 0 auto;
+    display: block;
+    width: 1400px;
+    height: 600px;
+    border-style: solid;
+    border-color: white;
+    border-width: 3px;
+}
+.press_start{
+  display: block;
+  position: fixed;
+  top: 40vh;
+  left: 30vw;
+}
+/* -------------------------------------------*/
