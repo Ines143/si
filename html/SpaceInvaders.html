@@ -1,0 +1,87 @@
+<html>
+
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <head>
+      <title>Space Invaders</title>
+      <link rel="stylesheet" href="../css/style.css" type="text/css" media="all">
+<!--  <script src="initCanvas.js" type="text/javascript"> </script>  -->
+  </head>
+
+
+<!--    <body onLoad="init(); carga(); marcador_pantalla();" > -->
+  <body onLoad="jugar();" >
+
+
+      <div>
+        <nav>
+        <a href="../html/SpaceInvaders.html">JUGAR</a>
+        <a href="#">INSTRUCCIONES</a>
+        <a href="#">AUTORXS</a>
+        <a href="#">ABOUT US</a>
+        <a href="../html/contacto.html">CONTACT US</a>
+      </nav>
+      </div>
+
+      <video autoplay muted loop id="space_video" type="video/mp4">
+        <source src="../imagenes/video/space_video.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+
+        <div id="overlay">
+          <div class="popup" id='score'>
+              <img class="game_over" id="game_over" src="../imagenes/game_over.png">
+              <h4> Your Score: <span id="score-pantalla">0</span></h4>
+                <form action="">
+                  <div class="contenedor-inputs">
+                    <input type="text" class="enter-nick" placeholder="nickname" id="nickname" size="10" maxlength="10"/>
+                  </div>
+                  <input type="submit" class="btn-submit">
+                </form>
+          </div>
+        </div>
+
+
+
+      <p class="time-crono" id="padre-timecrono">
+         <a id="hijo-timecrono"class="time-crono1">Mi tiempo: <span id="time-crono">0</span></a>
+      </p>
+
+
+
+      <p class="marcador">
+         <a class="marcador1">Score: <span id="marcador">0</span></a>
+      </p>
+
+
+    <!--  <video id="video" width="360" height="450">
+        <source src="imagenes/video/video2.mp4"  type="video/mp4">
+      </video>-->
+
+
+      <div id="canvascanvas">
+        <canvas id="myCanvas"></canvas>
+
+        <img id="press_start"  class="press_start" src="../imagenes/gif/press_start2.gif" onClick="init(); carga(); marcador_pantalla();">
+        <!--<button class="boton_canvas" id="botoncanvas" onclick="init(); carga(); marcador_pantalla();">JUGAR</button>-->
+      </div>
+
+<!--
+
+        <section id = "game">
+          <span class = "score"> 0 </span>
+          <span class = "time"> 0 </span>
+          <span class = "start"> START !!
+            <ol class = "high-scores">
+            </ol>
+          </span>
+        </section>
+-->
+      <script src="../scripts/scores.js" type="text/javascript"></script>
+      <script src="../scripts/code.js" type="text/javascript"></script>
+
+  </body>
+
+
+</html>
